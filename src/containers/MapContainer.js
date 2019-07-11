@@ -17,7 +17,7 @@ const mapStateToProps  = (state) =>({
 const mapDispatchToProps = (dispatch) => ({
     onClick: (mapProps, map, clickEvent) => {
         console.log(clickEvent);
-        dispatch(showCityWeather('çity'));
+        dispatch(showCityWeather(`çity-${Math.random()}`));
     }
 })
 

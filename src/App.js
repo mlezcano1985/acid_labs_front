@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import MapContainer from "./containers/MapContainer";
+// import { City } from "./components/City";
 import CityContainer from "./containers/CityContainer";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
   return (
     <div>
       <MapContainer></MapContainer>
+      {/* <City></City> */}
       <CityContainer></CityContainer>
     </div>
   );
