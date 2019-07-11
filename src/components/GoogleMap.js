@@ -8,7 +8,7 @@ export const GoogleMap = ({ google, onClick }) => {
     const style = {
         width: '100%',
         height: '100%'
-      }
+    }
 
     return(
         <Map 
