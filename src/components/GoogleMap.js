@@ -15,10 +15,6 @@ export const GoogleMap = ({ google, onClick }) => {
             google={google} 
             zoom={1}
             minZoom={1}
-            center={{
-                lat: 0,
-                lng: 0
-            }}
             initialCenter={{
                 lat: 0,
                 lng: 0
