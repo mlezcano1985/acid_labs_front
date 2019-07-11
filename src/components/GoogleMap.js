@@ -33,5 +33,6 @@ export const GoogleMap = ({ google, onClick }) => {
 }
 
 export default GoogleApiWrapper({
-    apiKey: key
+    apiKey: key,
+    language: 'es'
 })(GoogleMap);
