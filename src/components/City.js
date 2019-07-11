@@ -21,8 +21,11 @@ export const City = ({ show, lat, lng, handleClose }) => {
 
 	const load = async () => {
 		const address = await getCity();
-		setAddress(address);
-		return WeatherService.getCity(address.city, lat, lng);
+		if(address) {
+			setAddress(address);
+			return WeatherService.getCity(address.city, lat, lng);
+		}
+		return null;
 	}
 
 	const fetch = async () => {
@@ -53,7 +56,10 @@ export const City = ({ show, lat, lng, handleClose }) => {
 							city: r.place_id,
 							formatted_address: r.formatted_address
 						});
-					}					
+					}
+					else{
+						resolve();
+					}
 				  }
 			});
 		});
@@ -75,7 +81,7 @@ export const City = ({ show, lat, lng, handleClose }) => {
 			{/* <DialogTitle id="alert-dialog-title">{"Use Google's location service?"}</DialogTitle> */}
 			<DialogContent style={{textAlign: "center"}}>				
 					{loading && <CircularProgress className={classes.progress} />}
-					{ !loading && !model && <div>Error al cargar</div>}
+					{ !loading && !model && <div>No hay información asociada a ese lugar</div>}
 					{ !loading && model && 
 					<div>
 						<h1>{address.formatted_address}</h1>
@@ -86,6 +92,10 @@ export const City = ({ show, lat, lng, handleClose }) => {
 						<div>
 							<strong>Pronóstico: </strong>
 							<span>{model.currently.summary}</span>
+						</div>
+						<div>
+							<strong>Humedad: </strong>
+							<span>{model.currently.humidity}%</span>
 						</div>
 					</div>
 				}
