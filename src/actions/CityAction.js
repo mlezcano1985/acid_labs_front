@@ -1,21 +1,23 @@
 import { SHOW_CITY_WEATHER, HIDE_CITY_WEATHER } from "./ConstantsAction";
 
-export function showCityWeather(city) {
+export function showCityWeather({lat, lng}) {
     return {
         type: SHOW_CITY_WEATHER,
         payload: {
             show: true,
-            city: city
+            lat: lat,
+            lng: lng
         }
     };
 }
 
-export function hideCityWeather(city) {
+export function hideCityWeather() {
     return {
         type: HIDE_CITY_WEATHER,
         payload: {
             show: false,
-            city: city
+            lat: null,
+            lng: null
         }
     };
 }

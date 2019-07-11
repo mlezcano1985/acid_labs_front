@@ -19,6 +19,10 @@ export const GoogleMap = ({ google, onClick }) => {
                 lat: 0,
                 lng: 0
             }}
+            initialCenter={{
+                lat: 0,
+                lng: 0
+            }}
             style={style}
             scrollwheel={false}
             disableDefaultUI={true}

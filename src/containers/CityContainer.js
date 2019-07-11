@@ -18,7 +18,7 @@ const mapStateToProps = (state) =>({
 const mapDispatchToProps = (dispatch) => ({
     handleClose: () => {
         console.log('close');
-        dispatch(hideCityWeather(null));
+        dispatch(hideCityWeather());
     }
 })
 

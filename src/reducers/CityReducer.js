@@ -2,7 +2,8 @@ import { SHOW_CITY_WEATHER, HIDE_CITY_WEATHER } from '../actions'
 
 const initialState = {
     show: false,
-    city: null
+    lat: null,
+    lng: null
 }
 
 export const cityReducer = (state = initialState, action) => {

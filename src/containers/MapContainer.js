@@ -17,7 +17,10 @@ const mapStateToProps  = (state) =>({
 const mapDispatchToProps = (dispatch) => ({
     onClick: (mapProps, map, clickEvent) => {
         console.log(clickEvent);
-        dispatch(showCityWeather(`çity-${Math.random()}`));
+        dispatch(showCityWeather({
+            lat: clickEvent.latLng.lat(),
+            lng: clickEvent.latLng.lng()
+        }));
     }
 })
 
