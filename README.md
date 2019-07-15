@@ -16,3 +16,6 @@ Simple aplicación construida con ReactJS para realizar consultas a una API cons
 - Instalar dependencias usando el comando `yarn install`.
 - Ejecutar el comando `yarn start` para que la se inicie la aplicación web en el entorno de desarrollo.
 - Abrir en el navegador la url: [http://localhost:3000](http://localhost:3000).
+
+# Entornos
+Para poder consumir los servicios de [Google Map](https://developers.google.com/maps/documentation/?hl=es), debe poner un key válido en los ficheros `.env.development` o `.env.production`, según sea el caso. Puede consultar este [enlace](https://developers.google.com/maps/documentation/javascript/get-api-key) para más información.
