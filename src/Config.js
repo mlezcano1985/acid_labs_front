@@ -1,6 +1,6 @@
 const Config = {
-    baseUrl: process.env['BASE_URL'] || `${window.location.protocol}//${window.location.hostname}:3001`,
-    mapKey: process.env['API_KEY'] || 'AIzaSyCpw-ITSec2Rq0sJVBcAqwey4x4kB4bSwM'
+    baseUrl: process.env['REACT_APP_BASE_URL'],
+    mapKey: process.env['REACT_APP_API_KEY']
 };
 
 export default Config;
