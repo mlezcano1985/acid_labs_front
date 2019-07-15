@@ -5,7 +5,7 @@ Simple aplicación construida con ReactJS para realizar consultas a una API cons
 - Clonar o descargar el repositorio.
 - Abrir un terminal en la raíz del proyecto.
 
-# Ejecutar la API con Docker
+# Ejecutar la Web con Docker
 - Instalar [Docker](https://docs.docker.com/compose/install/) en dependencia de su sistema operativo.
 - Abrir un terminal en la raíz del proyecto.
 - Ejecutar el comando `yarn run start-docker` para que la se inicie el contenedor de react.
